@@ -55,4 +55,4 @@ python predict.py
 | 微调方法 | Batch Size | 显存占用 (近似) | F1 Score (参考) |
 | :---: | :---: | :---: | :---: |
 | **LoRA (BF16)** | 4 | ~25GB | 82.7% |
-| **QLoRA (4-bit)** | 4 | ~12 GB | 83% |
+| **QLoRA (4-bit)** | 4 | ~13 GB | 82.1% |
