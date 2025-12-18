@@ -1,0 +1,38 @@
+{
+  "dataset": "bc2gm1",
+  "pretrained_model_name": "Qwen2.5-7B-Instruct",
+
+  "pretrained_model_path": "./pre_models/Qwen2.5-7B-Instruct",
+  "output_dir": "output/bc2gm1/qwen_ner_QLoRA",
+  "train_path": "./data/bc2gm1/train.json",
+  "dev_path": "./data/bc2gm1/dev.json",
+  "test_path": "./data/bc2gm1/test.json",
+  "labels_path": "./data/bc2gm1/labels.json",
+
+  "max_seq_len": 512,
+  "batch_size": 4,
+
+  "epochs":3,
+  "learning_rate": 5e-5,
+  "weight_decay": 0.01,
+  "warmup_ratio": 0.1,
+  "dropout": 0.1,
+  "seed": 42,
+
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "lora_dropout": 0.05,
+  "lora_target_modules": [
+    "q_proj", "k_proj", "v_proj", "o_proj",
+    "gate_proj", "up_proj", "down_proj"
+  ],
+
+  "max_new_tokens":128,
+  "method": "qlora",
+  "use_qlora": true,
+  "use_swan": true,
+  "swan_project": "qwen-ner",
+  "swan_run_name": "bc2gm1_qwen_qlora_experiment",
+  "swan_log_steps": 20
+
+}
